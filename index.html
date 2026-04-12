@@ -7,12 +7,43 @@
 
   <style>
     body {
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.7;
+      display: flex;
       color: #222;
+    }
+
+    .sidebar {
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      border-right: 1px solid #eee;
+      padding: 40px 20px;
+      background: #fafafa;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 12px 0;
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover {
+      color: #000;
+    }
+
+    .content {
+      margin-left: 260px;
+      padding: 60px 40px;
+      max-width: 760px;
     }
 
     h1 {
@@ -33,15 +64,8 @@
     }
 
     p {
+      line-height: 1.7;
       margin: 15px 0;
-    }
-
-    .section {
-      margin-top: 30px;
-    }
-
-    .section p {
-      margin-bottom: 20px;
     }
 
     .highlight {
@@ -51,11 +75,10 @@
 
     .subtle {
       color: #666;
-      margin-top: 10px;
     }
 
     hr {
-      margin: 45px 0;
+      margin: 40px 0;
       border: none;
       border-top: 1px solid #eee;
     }
@@ -64,7 +87,17 @@
 
 <body>
 
-<h1>Nguyen Tuan Kiet</h1>
+<div class="sidebar">
+  <h2>Nguyen Tuan Kiet</h2>
+
+  <a href="#home">Home</a>
+  <a href="#path">The Path</a>
+  <a href="#reflections">Reflections</a>
+</div>
+
+<div class="content">
+
+<h1 id="home">Nguyen Tuan Kiet</h1>
 <h3>Leadership • Mindset • Conscious Transformation</h3>
 
 <p class="highlight">
@@ -81,78 +114,45 @@ Leadership, mindset, and human transformation.
 <h2>Overview</h2>
 
 <p>
-I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change — 
+I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change —
 not merely improved performance, but clearer direction, healthier inner states, and more conscious ways of leading and living.
 </p>
 
 <p>
 My work sits at the intersection of leadership, mindset, behavioral transformation, and inner development.
-I support change at both the system level and the individual level.
 </p>
 
-<div class="section">
-<h2>What I Do</h2>
-
-<p><strong>Conscious Leadership & Organizations</strong><br>
-Supporting leaders and organizations in cultivating clarity, ethical leadership, and sustainable growth.</p>
-
-<p><strong>Sustainable Change & Behavioral Transformation</strong><br>
-Addressing mindset, behavior, and underlying patterns that shape real outcomes.</p>
-
-<p><strong>Mind Mastery & Peak Performance</strong><br>
-Developing focus, resilience, and high performance without burnout.</p>
-
-<p><strong>Emotional Healing & Mental Resilience</strong><br>
-Supporting emotional balance, inner stability, and psychological strength.</p>
-
-</div>
-
-<div class="section">
-<h2>How I Work</h2>
+<h2 id="path">The Path</h2>
 
 <p>
-I integrate strategic thinking, behavioral change methodologies, coaching, and deep inner work —
-grounded in awareness and responsibility.
+My work is grounded in the study and practice of Dhamma —
+not as belief, but as direct understanding of mind, suffering, and freedom.
 </p>
 
 <p>
-Transformation happens when clarity meets responsibility,
-and when change is supported by both awareness and action.
-</p>
-
-</div>
-
-<div class="section">
-<h2>The Path</h2>
-
-<p>
-My work is grounded in the study and practice of Dhamma — 
-not as belief or philosophy, but as a way of understanding the nature of mind, suffering, and freedom.
-</p>
-
-<p>
-Modern frameworks such as leadership, behavioral science, and NLP are used as practical tools,
+Frameworks such as leadership, NLP, and behavioral science are used as practical tools,
 but clarity arises from awareness and direct seeing.
 </p>
 
 <p>
 This path is not about fixing, but about understanding —
-and allowing transformation to unfold from that understanding.
+allowing transformation to unfold naturally from insight.
+</p>
+
+<h2 id="reflections">Reflections</h2>
+
+<p class="subtle">
+Short insights. Direct observations. Real practice.
 </p>
 
 <p>
-Each person must walk their own path.
-What is shared here is simply a reflection — not a conclusion.
+(First reflections will appear here.)
 </p>
 
-</div>
+<hr>
 
-<div class="section">
-<h2>A Note</h2>
-
-<p>
-This work is not about titles or claims of expertise.
-It is about presence, responsibility, and the capacity to transform — consciously.
+<p class="subtle">
+© Nguyen Tuan Kiet
 </p>
 
 </div>
