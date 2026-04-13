@@ -26,6 +26,7 @@
       font-size: 16px;
       margin-bottom: 25px;
       font-weight: 500;
+      cursor: pointer;
     }
 
     .sidebar a {
@@ -34,6 +35,7 @@
       text-decoration: none;
       color: #555;
       font-size: 14px;
+      cursor: pointer;
     }
 
     .sidebar a:hover {
@@ -44,215 +46,140 @@
       margin-left: 260px;
       padding: 60px 40px;
       max-width: 760px;
+      width: 100%;
     }
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 5px;
+    /* CSS PHỤC VỤ VIỆC ẨN/HIỆN */
+    section {
+      display: none; /* Mặc định ẩn hết */
+      animation: fadeIn 0.4s ease;
     }
 
-    h2 {
-      margin-top: 50px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 6px;
+    section.active {
+      display: block; /* Chỉ hiện cái nào active */
     }
 
-    h3 {
-      font-weight: normal;
-      color: #666;
-      margin-top: 0;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    p {
-      line-height: 1.7;
-      margin: 15px 0;
-    }
-
-    .highlight {
-      font-weight: 500;
-      margin-top: 20px;
-    }
-
-    .subtle {
-      color: #666;
-    }
-
-    hr {
-      margin: 40px 0;
-      border: none;
-      border-top: 1px solid #eee;
-    }
+    h1 { font-size: 34px; margin-bottom: 5px; }
+    h2 { margin-top: 50px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+    h3 { font-weight: normal; color: #666; margin-top: 0; }
+    p { line-height: 1.7; margin: 15px 0; }
+    .highlight { font-weight: 500; margin-top: 20px; }
+    .subtle { color: #666; }
+    hr { margin: 40px 0; border: none; border-top: 1px solid #eee; }
   </style>
 </head>
 
 <body>
 
 <div class="sidebar">
-  <h2>Nguyen Tuan Kiet</h2>
-
-  <a href="#home">Home</a>
-  <a href="#path">The Path</a>
-  <a href="#reflections">Reflections</a>
-  <h2 id="contact">Contact</h2>
+  <h2 onclick="showSection('home')">Nguyen Tuan Kiet</h2>
+  <a onclick="showSection('home')">Home</a>
+  <a onclick="showSection('path')">The Path</a>
+  <a onclick="showSection('reflections')">Reflections</a>
+  <a onclick="showSection('contact')">Contact</a>
 </div>
 
 <div class="content">
 
-<h1 id="home">Nguyen Tuan Kiet</h1>
-<h3>Leadership • Mindset • Conscious Transformation</h3>
-
-<p class="highlight">
-Seeing clearly.<br>
-Leading consciously.
-</p>
-
-<p class="subtle">
-Leadership, mindset, and human transformation.
-</p>
-
-<hr>
-
-<h2>Overview</h2>
-
-<p>
-I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change —
-not merely improved performance, but clearer direction, healthier inner states, and more conscious ways of leading and living.
-</p>
-
-<p>
-My work sits at the intersection of leadership, mindset, behavioral transformation, and inner development.
-</p>
-
-<h2 id="path">The Path</h2>
-
-<p>
-My work is grounded in the study and practice of Dhamma —
-not as belief, but as direct understanding of mind, suffering, and freedom.
-</p>
-
-<p>
-Frameworks such as leadership, NLP, and behavioral science are used as practical tools,
-but clarity arises from awareness and direct seeing.
-</p>
-
-<p>
-This path is not about fixing, but about understanding —
-allowing transformation to unfold naturally from insight.
-</p>
-
-<h2 id="reflections">Reflections</h2>
-
-<p class="subtle">
-Short insights. Direct observations. Real practice.
-</p>
-
-<h3>Reflection #1</h3>
-
-<p>
-Most people try to change their lives by changing conditions.
-</p>
-
-<p>
-But suffering does not come from conditions —  
-it comes from the way the mind relates to them.
-</p>
-
-<p>
-When this is seen clearly,  
-the need to control begins to soften.
-</p>
-
-<p>
-And something quieter becomes available —  
-not as an idea, but as a direct experience.
-</p>
-<div style="margin-top: 50px;">
-    <h3>Reflection #2</h3>
-
+  <section id="home" class="active">
+    <h1>Nguyen Tuan Kiet</h1>
+    <h3>Leadership • Mindset • Conscious Transformation</h3>
+    <p class="highlight">Seeing clearly.<br>Leading consciously.</p>
+    <p class="subtle">Leadership, mindset, and human transformation.</p>
+    <hr>
+    <h2>Overview</h2>
     <p>
-    Most people attempt to stabilize their lives by trying to settle the "storm" of external conditions.
+      I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change —
+      not merely improved performance, but clearer direction, healthier inner states, and more conscious ways of leading and living.
     </p>
+    <p>My work sits at the intersection of leadership, mindset, behavioral transformation, and inner development.</p>
+  </section>
 
+  <section id="path">
+    <h2>The Path</h2>
     <p>
-    In leadership, this often looks like an exhaustive struggle to control every variable: KPIs, deadlines, and the unpredictable behaviors of others.
+      My work is grounded in the study and practice of Dhamma —
+      not as belief, but as direct understanding of mind, suffering, and freedom.
     </p>
+    <p>
+      Frameworks such as leadership, NLP, and behavioral science are used as practical tools,
+      but clarity arises from awareness and direct seeing.
+    </p>
+    <p>
+      This path is not about fixing, but about understanding —
+      allowing transformation to unfold naturally from insight.
+    </p>
+  </section>
 
-    <p>
-    But you cannot steady a ship by trying to flatten the sea.
-    </p>
+  <section id="reflections">
+    <h2>Reflections</h2>
+    <p class="subtle">Short insights. Direct observations. Real practice.</p>
 
-    <p>
-    Stability does not come from the absence of a storm; it comes from the depth of the anchor.
-    </p>
+    <div style="margin-top: 30px;">
+      <h3>Reflection #1</h3>
+      <p>Most people try to change their lives by changing conditions.</p>
+      <p>But suffering does not come from conditions — it comes from the way the mind relates to them.</p>
+      <p>When this is seen clearly, the need to control begins to soften.</p>
+      <p>And something quieter becomes available — not as an idea, but as a direct experience.</p>
+    </div>
 
-    <p>
-    That anchor is <strong>Presence</strong>.
-    </p>
+    <hr>
 
-    <p>
-    When the mind is no longer swept away by anxieties of the past or the pressures of the future, a natural clarity begins to emerge.
-    </p>
+    <div>
+      <h3>Reflection #2</h3>
+      <p>Most people attempt to stabilize their lives by trying to settle the "storm" of external conditions.</p>
+      <p>In leadership, this often looks like an exhaustive struggle to control every variable: KPIs, deadlines, and the unpredictable behaviors of others.</p>
+      <p>But you cannot steady a ship by trying to flatten the sea.</p>
+      <p>Stability does not come from the absence of a storm; it comes from the depth of the anchor.</p>
+      <p>That anchor is <strong>Presence</strong>.</p>
+      <p>When the mind is no longer swept away by anxieties of the past or the pressures of the future, a natural clarity begins to emerge.</p>
+      <p>When you are truly present, you begin to <strong>see clearly</strong>:</p>
+      <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+          <li>• You see the root cause of a conflict, not just the heat of the argument.</li>
+          <li>• You see the structural bottleneck, not just the person to blame.</li>
+          <li>• You see that your own composure has more power to steady a team than any command ever could.</li>
+      </ul>
+      <p>Transformation is not about acquiring new tools to control the world. It is about understanding the movement of your own mind, allowing leadership to flow from a place of awareness rather than reactivity.</p>
+      <p>When the leader is still, the system begins to settle itself.</p>
+    </div>
+  </section>
 
-    <p>
-    When you are truly present, you begin to <strong>see clearly</strong>:
-    </p>
-    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
-        <li>• You see the root cause of a conflict, not just the heat of the argument.</li>
-        <li>• You see the structural bottleneck, not just the person to blame.</li>
-        <li>• You see that your own composure has more power to steady a team than any command ever could.</li>
-    </ul>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="subtle">If this resonates, you are welcome to connect.</p>
+    <p>Email:<br><a href="mailto:ntkiet75@gmail.com">ntkiet75@gmail.com</a></p>
+    <p>Website:<br><a href="https://nguyentuankiet.vn" target="_blank">nguyentuankiet.vn</a></p>
+    <p>LinkedIn:<br><a href="https://www.linkedin.com/in/kiet-nguyen75" target="_blank">linkedin.com/in/kiet-nguyen75</a></p>
+    <p>Facebook:<br><a href="https://facebook.com/nguyentuankiet.vn" target="_blank">facebook.com/nguyentuankiet.vn</a></p>
+    <p>Phone / WhatsApp / Zalo:<br><a href="tel:+84908581527">+84 908 581 527</a></p>
+  </section>
 
-    <p>
-    Transformation is not about acquiring new tools to control the world. It is about understanding the movement of your own mind, allowing leadership to flow from a place of awareness rather than reactivity.
-    </p>
+  <hr>
+  <p class="subtle">© Nguyen Tuan Kiet</p>
 
-    <p>
-    When the leader is still, the system begins to settle itself.
-    </p>
 </div>
-  
-<hr>
 
-<p class="subtle">
-  <h2 id="contact">Contact</h2>
+<script>
+  function showSection(sectionId) {
+    // 1. Ẩn tất cả các section
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
 
-<p class="subtle">
-If this resonates, you are welcome to connect.
-</p>
+    // 2. Hiện section được chọn
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.classList.add('active');
+    }
 
-<p>
-Email:<br>
-<a href="mailto:ntkiet75@gmail.com">ntkiet75@gmail.com</a>
-</p>
+    // 3. Cuộn lên đầu nội dung
+    window.scrollTo(0, 0);
+  }
+</script>
 
-<p>
-Website:<br>
-<a href="https://nguyentuankiet.vn" target="_blank">
-nguyentuankiet.vn
-</a>
-</p>
-
-<p>
-LinkedIn:<br>
-<a href="https://www.linkedin.com/in/kiet-nguyen75" target="_blank">
-linkedin.com/in/kiet-nguyen75
-</a>
-</p>
-
-<p>
-Facebook:<br>
-<a href="https://facebook.com/nguyentuankiet.vn" target="_blank">
-facebook.com/nguyentuankiet.vn
-</a>
-</p>
-
-<p>
-Phone / WhatsApp / Zalo:<br>
-<a href="tel:+84908581527">+84 908 581 527</a>
-</p>
-
-<hr>
-
-<p class="subtle">
-© Nguyen Tuan Kiet
-</p>
+</body>
+</html>
