@@ -10,6 +10,7 @@
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       display: flex;
+      flex-direction: row; /* Mặc định nằm ngang cho máy tính */
       color: #222;
     }
 
@@ -20,66 +21,55 @@
       border-right: 1px solid #eee;
       padding: 40px 20px;
       background: #fafafa;
+      z-index: 100;
     }
 
-    .sidebar h2 {
-      font-size: 16px;
-      margin-bottom: 25px;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .sidebar a {
-      display: block;
-      margin: 12px 0;
-      text-decoration: none;
-      color: #555;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .sidebar a:hover {
-      color: #000;
-    }
+    .sidebar h2 { font-size: 16px; margin-bottom: 25px; font-weight: 500; cursor: pointer; }
+    .sidebar a { display: block; margin: 12px 0; text-decoration: none; color: #555; font-size: 14px; cursor: pointer; }
+    .sidebar a:hover { color: #000; }
 
     .content {
-      margin-left: 260px;
+      margin-left: 260px; /* Cách lề cho sidebar trên máy tính */
       padding: 60px 40px;
       max-width: 760px;
       width: 100%;
     }
 
-    /* ĐIỀU KHIỂN ẨN/HIỆN SECTION */
-    section {
-      display: none;
-      animation: fadeIn 0.4s ease;
+    /* ĐIỀU CHỈNH RIÊNG CHO ĐIỆN THOẠI (Mobile) */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column; /* Chuyển thành dọc */
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; /* Không cố định một chỗ nữa */
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .sidebar a {
+        display: inline-block; /* Cho Menu nằm ngang trên mobile */
+        margin-right: 15px;
+        margin-top: 5px;
+      }
+      .content {
+        margin-left: 0; /* Bỏ cách lề trên mobile */
+        padding: 30px 20px;
+      }
     }
 
-    section.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
+    section { display: none; animation: fadeIn 0.4s ease; }
+    section.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     h1 { font-size: 34px; margin-bottom: 5px; }
     h2 { margin-top: 50px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-    
-    /* STYLE CHO TIÊU ĐỀ REFLECTION: ĐẬM VÀ RÕ RÀNG */
-    h3 { 
-      font-weight: 700; 
-      color: #000; 
-      margin-top: 0; 
-      margin-bottom: 15px;
-    }
-
+    h3 { font-weight: 700; color: #000; margin-top: 0; margin-bottom: 15px; }
     p { line-height: 1.7; margin: 15px 0; }
     .highlight { font-weight: 500; margin-top: 20px; }
     .subtle { color: #666; }
     hr { margin: 40px 0; border: none; border-top: 1px solid #eee; }
-    
     a { color: #555; }
     a:hover { color: #000; }
   </style>
@@ -96,7 +86,6 @@
 </div>
 
 <div class="content">
-
   <section id="home" class="active">
     <h1>Nguyen Tuan Kiet</h1>
     <h3>Leadership • Mindset • Conscious Transformation</h3>
@@ -104,33 +93,20 @@
     <p class="subtle">Leadership, mindset, and human transformation.</p>
     <hr>
     <h2>Overview</h2>
-    <p>
-      I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change —
-      not merely improved performance, but clearer direction, healthier inner states, and more conscious ways of leading and living.
-    </p>
+    <p>I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change — not merely improved performance, but clearer direction, healthier inner states, and more conscious ways of leading and living.</p>
     <p>My work sits at the intersection of leadership, mindset, behavioral transformation, and inner development.</p>
   </section>
 
   <section id="path">
     <h2>The Path</h2>
-    <p>
-      My work is grounded in the study and practice of Dhamma —
-      not as belief, but as direct understanding of mind, suffering, and freedom.
-    </p>
-    <p>
-      Frameworks such as leadership, NLP, and behavioral science are used as practical tools,
-      but clarity arises from awareness and direct seeing.
-    </p>
-    <p>
-      This path is not about fixing, but about understanding —
-      allowing transformation to unfold naturally from insight.
-    </p>
+    <p>My work is grounded in the study and practice of Dhamma — not as belief, but as direct understanding of mind, suffering, and freedom.</p>
+    <p>Frameworks such as leadership, NLP, and behavioral science are used as practical tools, but clarity arises from awareness and direct seeing.</p>
+    <p>This path is not about fixing, but about understanding — allowing transformation to unfold naturally from insight.</p>
   </section>
 
   <section id="reflections">
     <h2>Reflections</h2>
     <p class="subtle">Short insights. Direct observations. Real practice.</p>
-
     <div style="margin-top: 30px;">
       <h3>Reflection #1</h3>
       <p>Most people try to change their lives by changing conditions.</p>
@@ -138,9 +114,7 @@
       <p>When this is seen clearly, the need to control begins to soften.</p>
       <p>And something quieter becomes available — not as an idea, but as a direct experience.</p>
     </div>
-
     <hr>
-
     <div>
       <h3>Reflection #2</h3>
       <p>Most people attempt to stabilize their lives by trying to settle the "storm" of external conditions.</p>
@@ -172,22 +146,14 @@
 
   <hr>
   <p class="subtle">© Nguyen Tuan Kiet</p>
-
 </div>
 
 <script>
   function showSection(sectionId) {
-    // Ẩn tất cả các section
     const sections = document.querySelectorAll('section');
     sections.forEach(sec => sec.classList.remove('active'));
-
-    // Hiện section được chọn
     const target = document.getElementById(sectionId);
-    if (target) {
-      target.classList.add('active');
-    }
-
-    // Cuộn lên đầu nội dung bên phải
+    if (target) { target.classList.add('active'); }
     window.scrollTo(0, 0);
   }
 </script>
