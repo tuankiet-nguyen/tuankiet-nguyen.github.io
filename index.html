@@ -49,14 +49,14 @@
       width: 100%;
     }
 
-    /* CSS PHỤC VỤ VIỆC ẨN/HIỆN */
+    /* ĐIỀU KHIỂN ẨN/HIỆN SECTION */
     section {
-      display: none; /* Mặc định ẩn hết */
+      display: none;
       animation: fadeIn 0.4s ease;
     }
 
     section.active {
-      display: block; /* Chỉ hiện cái nào active */
+      display: block;
     }
 
     @keyframes fadeIn {
@@ -66,11 +66,22 @@
 
     h1 { font-size: 34px; margin-bottom: 5px; }
     h2 { margin-top: 50px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-    h3 { font-weight: normal; color: #666; margin-top: 0; }
+    
+    /* STYLE CHO TIÊU ĐỀ REFLECTION: ĐẬM VÀ RÕ RÀNG */
+    h3 { 
+      font-weight: 700; 
+      color: #000; 
+      margin-top: 0; 
+      margin-bottom: 15px;
+    }
+
     p { line-height: 1.7; margin: 15px 0; }
     .highlight { font-weight: 500; margin-top: 20px; }
     .subtle { color: #666; }
     hr { margin: 40px 0; border: none; border-top: 1px solid #eee; }
+    
+    a { color: #555; }
+    a:hover { color: #000; }
   </style>
 </head>
 
@@ -166,17 +177,17 @@
 
 <script>
   function showSection(sectionId) {
-    // 1. Ẩn tất cả các section
+    // Ẩn tất cả các section
     const sections = document.querySelectorAll('section');
     sections.forEach(sec => sec.classList.remove('active'));
 
-    // 2. Hiện section được chọn
+    // Hiện section được chọn
     const target = document.getElementById(sectionId);
     if (target) {
       target.classList.add('active');
     }
 
-    // 3. Cuộn lên đầu nội dung
+    // Cuộn lên đầu nội dung bên phải
     window.scrollTo(0, 0);
   }
 </script>
