@@ -55,6 +55,8 @@
     hr { margin: 40px 0; border: none; border-top: 1px solid #eee; }
     a { color: #555; text-decoration: none; }
     a:hover { color: #000; }
+    ul { padding-left: 0; list-style-type: none; }
+    li { margin-bottom: 10px; line-height: 1.7; }
   </style>
 </head>
 
@@ -76,42 +78,67 @@
     <p class="subtle">Leadership, mindset, and human transformation.</p>
     <hr>
     <h2>Overview</h2>
-    <p>I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change.</p>
+    <p>I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change — not merely improved performance, but clearer direction, healthier inner states, and more conscious ways of leading and living.</p>
+    <p>My work sits at the intersection of leadership, mindset, behavioral transformation, and inner development.</p>
   </section>
 
   <section id="path">
     <h2>The Path</h2>
     <p>My work is grounded in the study and practice of Dhamma — not as belief, but as direct understanding of mind, suffering, and freedom.</p>
+    <p>Frameworks such as leadership, NLP, and behavioral science are used as practical tools, but clarity arises from awareness and direct seeing.</p>
+    <p>This path is not about fixing, but about understanding — allowing transformation to unfold naturally from insight.</p>
   </section>
 
   <section id="reflections">
     <h2>Reflections</h2>
     <p class="subtle">Short insights. Direct observations. Real practice.</p>
 
-    <div id="ref1">
+    <div>
       <h3>Reflection #1</h3>
-      <p>Most people try to change their lives by changing conditions. But suffering does not come from conditions — it comes from the way the mind relates to them.</p>
+      <p>Most people try to change their lives by changing conditions.</p>
+      <p>But suffering does not come from conditions — it comes from the way the mind relates to them.</p>
+      <p>When this is seen clearly, the need to control begins to soften.</p>
+      <p>And something quieter becomes available — not as an idea, but as a direct experience.</p>
     </div>
     <hr>
 
-    <div id="ref2">
+    <div>
       <h3>Reflection #2</h3>
-      <p>Stability does not come from the absence of a storm; it comes from the depth of the anchor. That anchor is <strong>Presence</strong>.</p>
+      <p>Most people attempt to stabilize their lives by trying to settle the "storm" of external conditions.</p>
+      <p>In leadership, this often looks like an exhaustive struggle to control every variable: KPIs, deadlines, and the unpredictable behaviors of others.</p>
+      <p>But you cannot steady a ship by trying to flatten the sea. Stability does not come from the absence of a storm; it comes from the depth of the anchor.</p>
+      <p>That anchor is <strong>Presence</strong>.</p>
+      <p>When the mind is no longer swept away by anxieties of the past or the pressures of the future, a natural clarity begins to emerge.</p>
+      <p>When you are truly present, you begin to <strong>see clearly</strong>:</p>
+      <ul>
+          <li>• You see the root cause of a conflict, not just the heat of the argument.</li>
+          <li>• You see the structural bottleneck, not just the person to blame.</li>
+          <li>• You see that your own composure has more power to steady a team than any command ever could.</li>
+      </ul>
+      <p>Transformation is not about acquiring new tools to control the world. It is about understanding the movement of your own mind, allowing leadership to flow from a place of awareness rather than reactivity.</p>
+      <p>When the leader is still, the system begins to settle itself.</p>
     </div>
     <hr>
 
-    <div id="ref3">
+    <div>
       <h3>Reflection #3: The Gap - From Theory to a Second Nature</h3>
       <p>Most of our reactions are rooted in reactivity—a repetition of old habits and unnamed fears.</p>
-      <p>Between a stimulus and our response, there is always a <strong>gap</strong>. In leadership, this gap is where character is truly tested.</p>
-      <p>The only way to avoid being swept away is to transform awareness into a <strong>second nature</strong> through consistent Mindfulness practice.</p>
+      <p>Between a stimulus and our response, there is always a <strong>gap</strong>. In leadership, this gap is where character is truly tested: those few seconds before you decide to voice a criticism, or the moment of silence before making a pivotal decision.</p>
+      <p>The theory of "The Gap" is something many of us are familiar with or have encountered across various resources. However, knowing the gap exists and mastering it when emotions surge are two entirely different journeys.</p>
+      <p>The only way to avoid being swept away is to transform awareness into a <strong>second nature</strong> through consistent Mindfulness practice. Practice is not about suppression; it is about clearly recognizing: "This is an emotion; it is not me."</p>
+      <p>In that space, you stand firm in awareness. You calmly choose a response aligned with the <strong>core values</strong> you wish to offer, rather than blaming others or reacting out of old patterns.</p>
       <p><strong>Transformation does not begin with changing the world outside, but with mastering "the gap" through the instinct of presence.</strong></p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:ntkiet75@gmail.com">ntkiet75@gmail.com</a></p>
+    <p class="subtle">If this resonates, you are welcome to connect.</p>
+    <p>Email:<br><a href="mailto:ntkiet75@gmail.com">ntkiet75@gmail.com</a></p>
+    <p>Website:<br><a href="https://nguyentuankiet.vn" target="_blank">nguyentuankiet.vn</a></p>
+    <p>LinkedIn:<br><a href="https://www.linkedin.com/in/kiet-nguyen75" target="_blank">linkedin.com/in/kiet-nguyen75</a></p>
+    <p>Facebook:<br><a href="https://facebook.com/nguyentuankiet.vn" target="_blank">facebook.com/nguyentuankiet.vn</a></p>
+    <p>Phone / WhatsApp / Zalo:<br><a href="tel:+84908581527">+84 908 581 527</a></p>
   </section>
 
   <hr>
@@ -128,7 +155,6 @@
       target.classList.add('active');
     }
 
-    // Cập nhật trạng thái menu
     const links = document.querySelectorAll('.sidebar a');
     links.forEach(link => link.classList.remove('active-link'));
     const activeLink = document.getElementById('link-' + sectionId);
@@ -137,7 +163,6 @@
     window.scrollTo(0, 0);
   }
 
-  // Xử lý khi URL thay đổi (VD: bấm link từ bên ngoài)
   function handleRoute() {
     const hash = window.location.hash.replace('#', '') || 'home';
     showSection(hash);
