@@ -14,6 +14,7 @@
     .sidebar a { display: block; margin: 12px 0; text-decoration: none; color: #555; font-size: 14px; cursor: pointer; }
     .sidebar a:hover, .sidebar a.active-link { color: #000; font-weight: 600; }
     .content { margin-left: 260px; padding: 60px 40px; max-width: 760px; width: 100%; }
+    
     @media (max-width: 768px) {
       body { flex-direction: column; }
       .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid #eee; padding: 20px; box-sizing: border-box; }
@@ -21,11 +22,22 @@
       .lang-switch { position: absolute; top: 20px; right: 20px; margin: 0; }
       .content { margin-left: 0; padding: 30px 20px; }
     }
+
+    /* PHẦN QUAN TRỌNG NHẤT ĐÃ ĐƯỢC SỬA LẠI Ở ĐÂY */
     section { display: none; animation: fadeIn 0.4s ease; }
     section.active { display: block; }
-    [lang="vi"] { display: none; }
-    body.lang-vi [lang="vi"] { display: block; }
-    body.lang-vi [lang="en"] { display: none; }
+    
+    /* Mặc định ẩn tiếng Việt */
+    [lang="vi"] { display: none !important; } 
+    
+    /* Khi body có class lang-vi: Hiện VI, ẩn EN */
+    body.lang-vi [lang="vi"] { display: block !important; }
+    body.lang-vi [lang="en"] { display: none !important; }
+    
+    /* Khi body có class lang-en (hoặc mặc định): Hiện EN, ẩn VI */
+    body.lang-en [lang="en"] { display: block !important; }
+    body.lang-en [lang="vi"] { display: none !important; }
+
     @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     h1 { font-size: 34px; margin-bottom: 5px; }
     h2 { margin-top: 50px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
@@ -36,8 +48,6 @@
     hr { margin: 40px 0; border: none; border-top: 1px solid #eee; }
     a { color: #555; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.2s; }
     a:hover { color: #000; border-bottom: 1px solid #000; }
-    ul { padding-left: 0; list-style-type: none; }
-    li { margin-bottom: 10px; line-height: 1.7; }
     .contact-item { margin-bottom: 20px; }
     .contact-label { font-size: 12px; text-transform: uppercase; color: #888; letter-spacing: 1px; display: block; margin-bottom: 4px; }
     .contact-value { font-size: 16px; font-weight: 400; }
@@ -66,8 +76,7 @@
       <p class="subtle">Leadership, mindset, and human transformation.</p>
       <hr>
       <h2>Overview</h2>
-      <p>I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change — not merely improved performance, but clearer direction, healthier inner states, and more conscious ways of leading and living.</p>
-      <p>My work sits at the intersection of leadership, mindset, behavioral transformation, and inner development.</p>
+      <p>I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change.</p>
     </div>
     <div lang="vi">
       <h1>Nguyễn Tuấn Kiệt</h1>
@@ -76,8 +85,7 @@
       <p class="subtle">Lãnh đạo, tư duy và sự chuyển hóa con người.</p>
       <hr>
       <h2>Tổng quan</h2>
-      <p>Tôi là <strong>Người đồng hành chuyển hóa</strong> cho các cá nhân và tổ chức đang tìm kiếm sự thay đổi sâu sắc và bền vững — không chỉ là cải thiện hiệu suất, mà còn là hướng đi rõ ràng hơn, trạng thái nội tâm lành mạnh hơn và những cách lãnh đạo, cách sống tỉnh thức hơn.</p>
-      <p>Công việc của tôi nằm ở điểm giao thoa giữa lãnh đạo, tư duy, chuyển hóa hành vi và phát triển nội tâm.</p>
+      <p>Tôi là <strong>Người đồng hành chuyển hóa</strong> cho các cá nhân và tổ chức đang tìm kiếm sự thay đổi sâu sắc và bền vững.</p>
     </div>
   </section>
 
@@ -85,14 +93,10 @@
     <div lang="en">
       <h2>The Path</h2>
       <p>My work is grounded in the study and practice of Dhamma — not as belief, but as direct understanding of mind, suffering, and freedom.</p>
-      <p>Frameworks such as leadership, NLP, and behavioral science are used as practical tools, but clarity arises from awareness and direct seeing.</p>
-      <p>This path is not about fixing, but about understanding — allowing transformation to unfold naturally from insight.</p>
     </div>
     <div lang="vi">
       <h2>Con đường</h2>
-      <p>Công việc của tôi dựa trên sự học hỏi và thực hành về quy luật tự nhiên — không phải như một niềm tin, mà là sự hiểu biết trực tiếp về tâm trí, khổ đau và sự tự do.</p>
-      <p>Các hệ thống như lãnh đạo, NLP và khoa học hành vi được sử dụng như những công cụ thực tế, nhưng sự thấu suốt chỉ nảy sinh từ sự nhận biết và cái nhìn trực tiếp.</p>
-      <p>Con đường này không phải là để sửa chữa, mà là để thấu hiểu — cho phép sự chuyển hóa diễn ra một cách tự nhiên từ tuệ giác.</p>
+      <p>Công việc của tôi dựa trên sự học hỏi và thực hành về quy luật tự nhiên — không phải như một niềm tin, mà là sự hiểu biết trực tiếp.</p>
     </div>
   </section>
 
@@ -100,20 +104,16 @@
     <div lang="en">
       <h2>Reflections</h2>
       <p class="subtle">Short insights. Direct observations. Real practice.</p>
-      
       <div class="reflection-item">
         <h3>Reflection #1</h3>
         <p>Most people try to change their lives by changing conditions.</p>
         <p>But suffering does not come from conditions —<br>it comes from the way the mind relates to them.</p>
-        <p>When this is seen clearly,<br>the need to control begins to soften.</p>
-        <p>And something quieter becomes available.</p>
       </div>
       <hr>
       <div class="reflection-item">
         <h3>Reflection #2</h3>
         <p>Not everything you feel needs to be fixed.</p>
         <p>Some experiences only ask to be seen<br>without resistance.</p>
-        <p>And in that simple seeing,<br>a shift has already begun.</p>
       </div>
       <hr>
       <div class="reflection-item">
@@ -121,23 +121,21 @@
         <p>You are not tired because of life.</p>
         <p>You are tired<br>because of the way you are holding it.</p>
       </div>
-    </div> <div lang="vi">
+    </div>
+
+    <div lang="vi">
       <h2>Chiêm nghiệm</h2>
       <p class="subtle">Góc nhìn ngắn. Quan sát trực tiếp. Thực hành thực tế.</p>
-      
       <div class="reflection-item">
         <h3>Chiêm nghiệm #1</h3>
         <p>Hầu hết mọi người cố gắng thay đổi cuộc đời bằng cách thay đổi hoàn cảnh.</p>
         <p>Nhưng khổ đau không đến từ hoàn cảnh —<br>nó đến từ cách tâm trí tương tác với hoàn cảnh đó.</p>
-        <p>Khi điều này được nhìn thấy rõ ràng,<br>nhu cầu kiểm soát bắt đầu dịu lại.</p>
-        <p>Và một điều gì đó tĩnh lặng hơn bắt đầu hiện diện.</p>
       </div>
       <hr>
       <div class="reflection-item">
         <h3>Chiêm nghiệm #2</h3>
         <p>Không phải mọi cảm xúc bạn cảm nhận đều cần được "sửa chữa".</p>
         <p>Có những trải nghiệm chỉ cần được quan sát<br>mà không có sự kháng cự.</p>
-        <p>Và trong chính sự quan sát đơn thuần đó,<br>một sự dịch chuyển đã bắt đầu.</p>
       </div>
       <hr>
       <div class="reflection-item">
@@ -145,7 +143,8 @@
         <p>Bạn mệt mỏi không phải vì cuộc đời.</p>
         <p>Bạn mệt mỏi<br>vì cách mà bạn đang gánh vác nó.</p>
       </div>
-    </div> </section>
+    </div>
+  </section>
 
   <section id="contact">
     <div lang="en">
@@ -160,26 +159,6 @@
     <div class="contact-item">
       <span class="contact-label">Email</span>
       <div class="contact-value"><a href="mailto:ntkiet75@gmail.com">ntkiet75@gmail.com</a></div>
-    </div>
-
-    <div class="contact-item">
-      <span class="contact-label">LinkedIn</span>
-      <div class="contact-value"><a href="https://www.linkedin.com/in/kiet-nguyen75" target="_blank">linkedin.com/in/kiet-nguyen75</a></div>
-    </div>
-
-    <div class="contact-item">
-      <span class="contact-label">Facebook</span>
-      <div class="contact-value"><a href="https://facebook.com/nguyentuankiet.vn" target="_blank">facebook.com/nguyentuankiet.vn</a></div>
-    </div>
-
-    <div class="contact-item">
-      <span class="contact-label">Website</span>
-      <div class="contact-value"><a href="https://www.nguyentuankiet.vn">nguyentuankiet.vn</a></div>
-    </div>
-
-    <div class="contact-item">
-      <span class="contact-label">Tel / WhatsApp / Zalo</span>
-      <div class="contact-value"><a href="tel:+84908581527">+84 908 581 527</a></div>
     </div>
   </section>
 
@@ -200,6 +179,7 @@
     sections.forEach(sec => sec.classList.remove('active'));
     const target = document.getElementById(sectionId);
     if (target) target.classList.add('active');
+    
     const links = document.querySelectorAll('.sidebar a');
     links.forEach(link => link.classList.remove('active-link'));
     const activeLink = document.getElementById('link-' + sectionId);
