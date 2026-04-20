@@ -20,7 +20,7 @@
     .sidebar h2 { font-size: 16px; margin-bottom: 25px; font-weight: 500; cursor: pointer; }
     .sidebar a { display: block; margin: 12px 0; text-decoration: none; color: #555; font-size: 14px; cursor: pointer; }
     .sidebar a:hover, .sidebar a.active-link { color: #000; font-weight: 600; }
-    .content-area { margin-left: 260px; padding: 60px 40px; max-width: 760px; width: 100%; }
+    .content-area { margin-left: 260px; padding: 60px 40px; max-width: 760px; width: 100%; box-sizing: border-box; }
     
     @media (max-width: 768px) {
       body { flex-direction: column; }
@@ -33,7 +33,6 @@
     section { display: none; animation: fadeIn 0.4s ease; }
     section.active { display: block; }
     
-    /* Logic ẩn hiện ngôn ngữ */
     [lang="vi"] { display: none !important; } 
     body.lang-vi [lang="vi"] { display: block !important; }
     body.lang-vi [lang="en"] { display: none !important; }
@@ -53,7 +52,7 @@
     .contact-item { margin-bottom: 20px; }
     .contact-label { font-size: 12px; text-transform: uppercase; color: #888; letter-spacing: 1px; display: block; margin-bottom: 4px; }
     .contact-value { font-size: 16px; font-weight: 400; }
-    .reflection-item { margin-bottom: 30px; }
+    .reflection-item { margin-bottom: 40px; }
   </style>
 </head>
 <body class="lang-en">
@@ -109,188 +108,47 @@
     </div>
   </section>
 
-<section id="reflections">
-  <div lang="en">
-    <h2>Reflections</h2>
-    <p class="subtle">Short insights. Direct observations. Real practice on mind and leadership.</p>
-    <hr>
-    
-    <div class="reflection-item">
-      <h3>Reflection #1</h3>
-      <p>Most people try to change their lives by changing conditions.</p>
-      <p>But suffering does not come from conditions —<br>it comes from the way the mind relates to them.</p>
-      <p>When this is seen clearly,<br>the need to control begins to soften.</p>
-      <p>And something quieter becomes available.</p>
+  <section id="reflections">
+    <div lang="en">
+      <h2>Reflections</h2>
+      <p class="subtle">Short insights. Direct observations. Real practice.</p>
+      <hr>
+      <div class="reflection-item"><h3>Reflection #1</h3><p>Most people try to change their lives by changing conditions.<br>But suffering does not come from conditions — it comes from the way the mind relates to them.<br>When this is seen clearly, the need to control begins to soften.<br>And something quieter becomes available.</p></div>
+      <hr><div class="reflection-item"><h3>Reflection #2</h3><p>Not everything you feel needs to be fixed.<br>Some experiences only ask to be seen without resistance.<br>And in that simple seeing, a shift has already begun.</p></div>
+      <hr><div class="reflection-item"><h3>Reflection #3</h3><p>You are not tired because of life.<br>You are tired because of the way you are holding it.</p></div>
+      <hr><div class="reflection-item"><h3>Reflection #4</h3><p>What you call “yourself” is often just a pattern repeating.<br>Seen clearly, it begins to lose its weight.</p></div>
+      <hr><div class="reflection-item"><h3>Reflection #5</h3><p>Clarity does not come from thinking more.<br>It comes when thinking settles.<br>Not forced — just seen for what it is.</p></div>
+      <hr><div class="reflection-item"><h3>Reflection #6</h3><p>You don’t have to push life into a certain shape.<br>The struggle comes from the pushing.<br>Not from life itself. But from the way we try to shape it.</p></div>
+      <hr>
+      <div class="reflection-item">
+        <h3>Reflection #14: THE GAP</h3>
+        <p><strong>First, the reaction. Then, the seeing.</strong></p>
+        <p>There are moments when the reaction comes too fast. Anger rises, words follow, and control is already gone.</p>
+        <p>Only afterward, the seeing appears. A sense of regret.</p>
+        <p>It is the moment awareness begins to catch up with habit.</p>
+      </div>
     </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Reflection #2</h3>
-      <p>Not everything you feel needs to be fixed.</p>
-      <p>Some experiences only ask to be seen<br>without resistance.</p>
-      <p>And in that simple seeing,<br>a shift has already begun.</p>
+    <div lang="vi">
+      <h2>Suy ngẫm</h2>
+      <p class="subtle">Góc nhìn ngắn. Quan sát trực tiếp. Thực hành thực tế.</p>
+      <hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #1</h3><p>Hầu hết mọi người cố gắng thay đổi cuộc đời bằng cách thay đổi hoàn cảnh.<br>Nhưng khổ đau không đến từ hoàn cảnh — nó đến từ cách tâm trí tương tác với hoàn cảnh đó.<br>Khi điều này được nhìn thấy rõ ràng, nhu cầu kiểm soát bắt đầu dịu lại.<br>Và một điều gì đó tĩnh lặng hơn bắt đầu hiện diện.</p></div>
+      <hr><div class="reflection-item"><h3>Chiêm nghiệm #2</h3><p>Không phải mọi cảm xúc bạn cảm nhận đều cần được "sửa chữa".<br>Có những trải nghiệm chỉ cần được quan sát mà không có sự kháng cự.<br>Và trong chính sự quan sát đơn thuần đó, một sự dịch chuyển đã bắt đầu.</p></div>
+      <hr><div class="reflection-item"><h3>Chiêm nghiệm #3</h3><p>Bạn mệt mỏi không phải vì cuộc đời.<br>Bạn mệt mỏi vì cách mà bạn đang gánh vác nó.</p></div>
+      <hr><div class="reflection-item"><h3>Chiêm nghiệm #4</h3><p>Cái bạn gọi là “bản thân” thường chỉ là một khuôn mẫu đang lặp lại.<br>Khi thấy rõ điều đó, nó bắt đầu nhẹ đi.</p></div>
+      <hr><div class="reflection-item"><h3>Chiêm nghiệm #5</h3><p>Sự rõ ràng không đến từ việc suy nghĩ nhiều hơn.<br>Nó xuất hiện khi suy nghĩ lắng xuống.<br>Không ép buộc — chỉ đơn giản là thấy nó như nó là.</p></div>
+      <hr><div class="reflection-item"><h3>Chiêm nghiệm #6</h3><p>Bạn không cần phải ép cuộc sống vào một hình dạng nhất định.<br>Sự căng thẳng đến từ việc cố ép đó.<br>Không phải từ chính cuộc sống. Mà từ cách ta cố gắng uốn nắn nó.</p></div>
+      <hr>
+      <div class="reflection-item">
+        <h3>Chiêm nghiệm #14: KHOẢNG TRỐNG</h3>
+        <p><strong>Phản ứng trước. Thấy sau.</strong></p>
+        <p>Có những khoảnh khắc mà phản ứng đến quá nhanh. Cơn giận trỗi dậy, lời nói tuôn ra, và sự kiểm soát đã biến mất.</p>
+        <p>Chỉ sau đó, cái "thấy" mới xuất hiện. Một cảm giác hối tiếc.</p>
+        <p>Đó là khoảnh khắc mà nhận thức bắt đầu theo kịp thói quen.</p>
+      </div>
     </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Reflection #3</h3>
-      <p>You are not tired because of life.</p>
-      <p>You are tired<br>because of the way you are holding it.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Reflection #4</h3>
-      <p>What you call “yourself”<br>is often just a pattern<br>repeating.</p>
-      <p>Seen clearly,<br>it begins to lose its weight.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Reflection #5</h3>
-      <p>Clarity does not come<br>from thinking more.</p>
-      <p>It comes<br>when thinking settles.</p>
-      <p>Not forced —<br>just seen for what it is.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Reflection #6</h3>
-      <p>You don’t have to push life<br>into a certain shape.</p>
-      <p>The struggle comes<br>from the pushing.</p>
-      <p>Not from life itself.<br>But from the way we try to shape it.</p>
-    </div>
-    <hr>
+  </section>
 
-    <article class="reflection-entry" style="line-height: 1.8; color: #333;">
-      <h2 style="border-bottom: 1px solid #eee; padding-bottom: 10px;">REF 14: THE GAP</h2>
-      <p style="font-size: 1.2em; font-weight: bold; font-style: italic; color: #000; margin-bottom: 20px;">First, the reaction. Then, the seeing.</p>
-      <p>There are moments when the reaction comes too fast.</p>
-      <p>Anger rises, words follow, and control is already gone.</p>
-      <p style="text-align: center; margin: 20px 0; color: #ccc;">...</p>
-      <p>Only afterward, the seeing appears.</p>
-      <p>A sense of regret. A wish to have been calmer.</p>
-      <p style="margin-top: 20px;">But perhaps, this is not failure.</p>
-      <p>It is the moment awareness begins to catch up with habit.</p>
-      <p style="font-weight: 500;">Not yet free — but no longer completely unaware.</p>
-      
-      <footer style="margin-top: 40px; border-top: 1px dashed #ccc; padding-top: 20px;">
-        <p style="font-style: italic; margin-bottom: 5px;">A moment of seeing</p>
-        <p style="font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Nguyen Tuan Kiet</p>
-      </footer>
-    </article>
-  </div>
-
-  <div lang="vi">
-    <h2>Suy ngẫm</h2>
-    <p class="subtle">Những góc nhìn súc tích. Quan sát trực tiếp. Thực hành thực tế về tâm trí và lãnh đạo.</p>
-    <hr>
-    
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #1</h3>
-      <p>Hầu hết mọi người cố gắng thay đổi cuộc đời bằng cách thay đổi hoàn cảnh.</p>
-      <p>Nhưng khổ đau không đến từ hoàn cảnh —<br>it đến từ cách tâm trí tương tác với hoàn cảnh đó.</p>
-      <p>Khi điều này được nhìn thấy rõ ràng,<br>nhu cầu kiểm soát bắt đầu dịu lại.</p>
-      <p>Và một điều gì đó tĩnh lặng hơn bắt đầu hiện diện.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #2</h3>
-      <p>Không phải mọi cảm xúc bạn cảm nhận đều cần được "sửa chữa".</p>
-      <p>Có những trải nghiệm chỉ cần được quan sát<br>mà không có sự kháng cự.</p>
-      <p>Và trong chính sự quan sát đơn thuần đó,<br>một sự dịch chuyển đã bắt đầu.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #3</h3>
-      <p>Bạn mệt mỏi không phải vì cuộc đời.</p>
-      <p>Bạn mệt mỏi<br>vì cách mà bạn đang gánh vác nó.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #4</h3>
-      <p>Cái bạn gọi là “bản thân”<br>thường chỉ là một khuôn mẫu<br>đang lặp lại.</p>
-      <p>Khi thấy rõ điều đó,<br>nó bắt đầu nhẹ đi.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #5</h3>
-      <p>Sự rõ ràng không đến<br>từ việc suy nghĩ nhiều hơn.</p>
-      <p>Nó xuất hiện<br>khi suy nghĩ lắng xuống.</p>
-      <p>Không ép buộc —<br>chỉ đơn giản là thấy nó như nó là.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #6</h3>
-      <p>Bạn không cần phải ép cuộc sống<br>vào một hình dạng nhất định.</p>
-      <p>Sự căng thẳng<br>đến từ việc cố ép đó.</p>
-      <p>Không phải từ chính cuộc sống.<br>Mà từ cách ta cố gắng uốn nắn nó.</p>
-    </div>
-    <hr>
-
-    <article class="reflection-entry" style="line-height: 1.8; color: #333;">
-      <h2 style="border-bottom: 1px solid #eee; padding-bottom: 10px;">REF 14: KHOẢNG TRỐNG</h2>
-      <p style="font-size: 1.2em; font-weight: bold; font-style: italic; color: #000; margin-bottom: 20px;">Phản ứng trước. Thấy sau.</p>
-      <p>Có những khoảnh khắc mà phản ứng đến quá nhanh.</p>
-      <p>Cơn giận trỗi dậy, lời nói tuôn ra, và sự kiểm soát đã biến mất.</p>
-      <p style="text-align: center; margin: 20px 0; color: #ccc;">...</p>
-      <p>Chỉ sau đó, cái "thấy" mới xuất hiện.</p>
-      <p>Một cảm giác hối tiếc. Một ước muốn giá như mình đã bình tĩnh hơn.</p>
-      <p style="margin-top: 20px;">Nhưng có lẽ, đây không phải là một sự thất bại.</p>
-      <p>Đó là khoảnh khắc mà nhận thức bắt đầu theo kịp thói quen.</p>
-      <p style="font-weight: 500;">Chưa tự do — nhưng không còn hoàn toàn mê muội.</p>
-      
-      <footer style="margin-top: 40px; border-top: 1px dashed #ccc; padding-top: 20px;">
-        <p style="font-style: italic; margin-bottom: 5px;">A moment of seeing</p>
-        <p style="font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Nguyen Tuan Kiet</p>
-      </footer>
-    </article>
-  </div>
-</section>
-  <div lang="vi">
-    <h2>Suy ngẫm</h2>
-    <p class="subtle">Những góc nhìn súc tích. Quan sát trực tiếp. Thực hành thực tế về tâm trí và lãnh đạo.</p>
-    <hr>
-    
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #1</h3>
-      <p>Hầu hết mọi người cố gắng thay đổi cuộc đời bằng cách thay đổi hoàn cảnh. Nhưng khổ đau không đến từ hoàn cảnh — nó đến từ cách tâm trí tương tác với hoàn cảnh đó. Khi điều này được nhìn thấy rõ ràng, nhu cầu kiểm soát bắt đầu dịu lại. Và một điều gì đó tĩnh lặng hơn bắt đầu hiện diện.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #2</h3>
-      <p>Không phải mọi cảm xúc bạn cảm nhận đều cần được "sửa chữa". Có những trải nghiệm chỉ cần được quan sát mà không có sự kháng cự. Và trong chính sự quan sát đơn thuần đó, một sự dịch chuyển đã bắt đầu.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #3</h3>
-      <p>Bạn mệt mỏi không phải vì cuộc đời. Bạn mệt mỏi vì cách mà bạn đang gánh vác nó.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #4</h3>
-      <p>Cái bạn gọi là “bản thân” thường chỉ là một khuôn mẫu đang lặp lại. Khi thấy rõ điều đó, nó bắt đầu nhẹ đi.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #5</h3>
-      <p>Sự rõ ràng không đến từ việc suy nghĩ nhiều hơn. Nó xuất hiện khi suy nghĩ lắng xuống. Không ép buộc — chỉ đơn giản là thấy nó như nó là.</p>
-    </div>
-    <hr>
-    <div class="reflection-item">
-      <h3>Chiêm nghiệm #6</h3>
-      <p>Bạn không cần phải ép cuộc sống vào một hình dạng nhất định. Sự căng thẳng đến từ việc cố ép đó. Không phải từ chính cuộc sống. Mà từ cách ta cố gắng uốn nắn nó.</p>
-    </div>
-    <hr>
-
-    <article class="reflection-entry" style="line-height: 1.8; color: #333;">
-      <h2 style="border-bottom: 1px solid #eee; padding-bottom: 10px;">REF 14: KHOẢNG TRỐNG</h2>
-      <p style="font-size: 1.2em; font-weight: bold; font-style: italic; color: #000; margin-bottom: 20px;">Phản ứng trước. Thấy sau.</p>
-      <p>Có những khoảnh khắc mà phản ứng đến quá nhanh. Cơn giận trỗi dậy, lời nói tuôn ra, và sự kiểm soát đã biến mất.</p>
-      <p>Chỉ sau đó, cái "thấy" mới xuất hiện. Một cảm giác hối tiếc. Một ước muốn giá như mình đã bình tĩnh hơn.</p>
-      <p>Nhưng có lẽ, đây không phải là một sự thất bại. Đó là khoảnh khắc mà nhận thức bắt đầu theo kịp thói quen. Chưa tự do — nhưng không còn hoàn toàn mê muội.</p>
-      <footer style="margin-top: 30px; border-top: 1px dashed #ccc; padding-top: 20px;">
-        <p style="font-style: italic; margin-bottom: 5px;">A moment of seeing</p>
-        <p style="font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Nguyen Tuan Kiet</p>
-      </footer>
-    </article>
-  </div>
-</section>
   <section id="contact">
     <div lang="en">
       <h2>Contact</h2>
@@ -313,10 +171,6 @@
       <div class="contact-value"><a href="https://facebook.com/nguyentuankiet.vn" target="_blank">facebook.com/nguyentuankiet.vn</a></div>
     </div>
     <div class="contact-item">
-      <span class="contact-label">Website</span>
-      <div class="contact-value"><a href="https://www.nguyentuankiet.vn">nguyentuankiet.vn</a></div>
-    </div>
-    <div class="contact-item">
       <span class="contact-label">Tel / WhatsApp / Zalo</span>
       <div class="contact-value"><a href="tel:+84908581527">+84 908 581 527</a></div>
     </div>
@@ -333,34 +187,28 @@
     document.getElementById('btn-vi').className = (lang === 'vi' ? 'active' : '');
     localStorage.setItem('preferredLang', lang);
   }
-
   function showSection(sectionId) {
     const sections = document.querySelectorAll('section');
     sections.forEach(sec => sec.classList.remove('active'));
     const target = document.getElementById(sectionId);
     if (target) target.classList.add('active');
-    
     const links = document.querySelectorAll('.sidebar a');
     links.forEach(link => link.classList.remove('active-link'));
     const activeLink = document.getElementById('link-' + sectionId);
     if (activeLink) activeLink.classList.add('active-link');
     window.scrollTo(0, 0);
   }
-
   function handleRoute() {
     const hash = window.location.hash.replace('#', '') || 'home';
     showSection(hash);
   }
-
   window.addEventListener('hashchange', handleRoute);
   window.addEventListener('load', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'en';
     setLang(savedLang);
     handleRoute();
   });
-
   function navigateTo(id) { window.location.hash = id; }
 </script>
-
 </body>
 </html>
