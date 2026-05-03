@@ -53,6 +53,14 @@
     .contact-label { font-size: 12px; text-transform: uppercase; color: #888; letter-spacing: 1px; display: block; margin-bottom: 4px; }
     .contact-value { font-size: 16px; font-weight: 400; }
     .reflection-item { margin-bottom: 40px; }
+
+    /* Custom styles for images */
+    .img-fluid { max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 20px; }
+    .img-portrait { width: 280px; float: right; margin-left: 30px; margin-bottom: 20px; border-radius: 4px; }
+    .img-wide { width: 100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 30px; }
+    @media (max-width: 600px) {
+      .img-portrait { width: 100%; float: none; margin-left: 0; }
+    }
   </style>
 </head>
 <body class="lang-en">
@@ -72,21 +80,23 @@
 <div class="content-area">
   <section id="home">
     <div lang="en">
+      <img src="assets/img/portrait-standing.jpg" alt="Nguyen Tuan Kiet" class="img-portrait">
       <h1>Nguyen Tuan Kiet</h1>
       <h3>Leadership • Mindset • Conscious Transformation</h3>
       <p class="highlight">Seeing clearly.<br>Leading consciously.</p>
       <p class="subtle">Leadership, mindset, and human transformation.</p>
-      <hr>
+      <hr style="clear: both;">
       <h2>Overview</h2>
       <p>I work as a <strong>Transformation Partner</strong> for individuals and organizations seeking deep, sustainable change — not merely improved performance, but clearer direction, healthier inner states, and more conscious ways of leading and living.</p>
       <p>My work sits at the intersection of leadership, mindset, behavioral transformation, and inner development.</p>
     </div>
     <div lang="vi">
+      <img src="assets/img/portrait-standing.jpg" alt="Nguyễn Tuấn Kiệt" class="img-portrait">
       <h1>Nguyễn Tuấn Kiệt</h1>
       <h3>Lãnh đạo • Tư duy • Chuyển hóa tỉnh thức</h3>
       <p class="highlight">Nhìn thấu suốt.<br>Lãnh đạo tỉnh thức.</p>
       <p class="subtle">Lãnh đạo, tư duy và sự chuyển hóa con người.</p>
-      <hr>
+      <hr style="clear: both;">
       <h2>Tổng quan</h2>
       <p>Tôi là <strong>Người đồng hành chuyển hóa</strong> cho các cá nhân và tổ chức đang tìm kiếm sự thay đổi sâu sắc và bền vững — không chỉ là cải thiện hiệu suất, mà còn là hướng đi rõ ràng hơn, trạng thái nội tâm lành mạnh hơn và những cách lãnh đạo, cách sống tỉnh thức hơn.</p>
       <p>Công việc của tôi nằm ở điểm giao thoa giữa lãnh đạo, tư duy, chuyển hóa hành vi và phát triển nội tâm.</p>
@@ -95,12 +105,14 @@
 
   <section id="path">
     <div lang="en">
+      <img src="assets/img/portrait-wide.jpg" alt="The Path" class="img-wide">
       <h2>The Path</h2>
       <p>My work is grounded in the study and practice of <strong>Dhamma</strong> — not as belief, but as direct understanding of mind, energy, and freedom.</p>
       <p>Frameworks such as <strong>Leadership, NLP, and Behavioral Science</strong> are practical tools for de-structuring unconscious patterns. <strong>Energy Work</strong> serves as the bridge to align internal vitality with mental clarity. Yet, true transformation arises only from <strong>Awareness and Direct Seeing</strong>.</p>
       <p>This path is not about fixing, but about understanding — allowing transformation to unfold naturally from insight, whether in leading an organization or nurturing the self.</p>
     </div>
     <div lang="vi">
+      <img src="assets/img/portrait-wide.jpg" alt="Con đường" class="img-wide">
       <h2>Con đường</h2>
       <p>Nền tảng công việc của tôi dựa trên sự nghiên cứu và thực hành <strong>Dhamma (Pháp)</strong> — không phải như một niềm tin, mà là sự thấu hiểu trực tiếp về tâm trí, năng lượng và sự tự do.</p>
       <p>Các hệ thống như <strong>Lãnh đạo, NLP và Khoa học Hành vi</strong> là những công cụ thực tiễn để tháo gỡ các mô thức vô thức. <strong>Quản trị Năng lượng (Energy Work)</strong> đóng vai trò là chiếc cầu nối để hợp nhất sức sống nội tại với sự minh mẫn. Tuy nhiên, sự chuyển hóa thực sự chỉ nảy sinh từ <strong>Sự tỉnh thức và Cái thấy trực tiếp</strong>.</p>
@@ -110,6 +122,9 @@
 
   <section id="reflections">
     <div lang="en">
+      <div style="text-align: center;">
+        <img src="assets/img/portrait-meditation.jpg" alt="Reflections" style="width: 180px; border-radius: 50%; margin-bottom: 20px;">
+      </div>
       <h2>Reflections</h2>
       <p class="subtle">Short insights. Direct observations. Real practice on mind and leadership.</p>
       <hr>
@@ -169,6 +184,9 @@
     </div>
 
     <div lang="vi">
+      <div style="text-align: center;">
+        <img src="assets/img/portrait-meditation.jpg" alt="Suy ngẫm" style="width: 180px; border-radius: 50%; margin-bottom: 20px;">
+      </div>
       <h2>Suy ngẫm</h2>
       <p class="subtle">Những góc nhìn súc tích. Quan sát trực tiếp. Thực hành thực tế về tâm trí và lãnh đạo.</p>
       <hr>
