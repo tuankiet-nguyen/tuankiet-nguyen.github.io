@@ -20,7 +20,7 @@
     .sidebar h2 { font-size: 16px; margin-bottom: 25px; font-weight: 500; cursor: pointer; }
     .sidebar a { display: block; margin: 12px 0; text-decoration: none; color: #555; font-size: 14px; cursor: pointer; }
     .sidebar a:hover, .sidebar a.active-link { color: #000; font-weight: 600; }
-    .content-area { margin-left: 260px; padding: 60px 40px; max-width: 760px; width: 100%; box-sizing: border-box; }
+    .content-area { margin-left: 260px; padding: 60px 40px; max-width: 800px; width: 100%; box-sizing: border-box; }
     
     @media (max-width: 768px) {
       body { flex-direction: column; }
@@ -41,26 +41,24 @@
 
     @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     h1 { font-size: 34px; margin-bottom: 5px; }
-    h2 { margin-top: 50px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-    h3 { font-weight: 700; color: #000; margin-top: 30px; margin-bottom: 15px; }
-    p { line-height: 1.7; margin: 15px 0; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; }
-    .highlight { font-weight: 500; margin-top: 20px; font-size: 20px; color: #000; }
+    h2 { margin-top: 60px; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 30px; }
+    h3 { font-weight: 600; color: #000; margin-top: 40px; margin-bottom: 20px; }
+    p { line-height: 1.8; margin-bottom: 25px; }
+    ul { padding-left: 20px; margin-bottom: 30px; }
+    li { margin-bottom: 15px; line-height: 1.7; }
+    
+    .highlight { font-weight: 500; margin-top: 30px; font-size: 22px; color: #000; }
     .subtle { color: #666; font-style: italic; }
-    hr { margin: 40px 0; border: none; border-top: 1px solid #eee; }
-    a { color: #555; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.2s; }
-    a:hover { color: #000; border-bottom: 1px solid #000; }
-    .contact-item { margin-bottom: 20px; }
-    .contact-label { font-size: 12px; text-transform: uppercase; color: #888; letter-spacing: 1px; display: block; margin-bottom: 4px; }
-    .contact-value { font-size: 16px; font-weight: 400; }
-    .reflection-item { margin-bottom: 40px; }
+    .highlight-block { margin: 45px 0; border-left: 2px solid #eee; padding-left: 25px; }
+    
+    hr { margin: 50px 0; border: none; border-top: 1px solid #eee; }
+    .contact-item { margin-bottom: 25px; }
+    .contact-label { font-size: 11px; text-transform: uppercase; color: #999; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+    .contact-value { font-size: 16px; }
 
-    .img-portrait { width: 280px; float: right; margin-left: 30px; margin-bottom: 20px; border-radius: 4px; }
-    .img-wide { width: 100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 30px; }
-    @media (max-width: 600px) {
-      .img-portrait { width: 100%; float: none; margin-left: 0; }
-    }
+    .img-portrait { width: 280px; float: right; margin-left: 35px; margin-bottom: 25px; border-radius: 4px; }
+    .img-wide { width: 100%; height: 350px; object-fit: cover; border-radius: 4px; margin-bottom: 40px; }
+    @media (max-width: 600px) { .img-portrait { width: 100%; float: none; margin-left: 0; } }
   </style>
 </head>
 <body class="lang-en">
@@ -78,6 +76,7 @@
 </div>
 
 <div class="content-area">
+
   <section id="home">
     <div lang="en">
       <img src="assets/img/portrait-standing.jpg" alt="Nguyen Tuan Kiet" class="img-portrait">
@@ -86,11 +85,12 @@
       <p class="highlight">See clearly. Lead consciously.</p>
       <p class="subtle">Helping organizations and individuals develop executive clarity, healthier human dynamics, and more conscious ways of working and living.</p>
       <hr style="clear: both;">
+      
       <h2>Overview</h2>
       <p>I work as a <strong>Transformation Partner</strong> for organizations, leaders, and individuals seeking meaningful and sustainable change — moving beyond surface-level performance toward stronger leadership quality, clearer thinking, healthier human dynamics, and more conscious ways of leading and living.</p>
       
       <p><strong>My work integrates:</strong></p>
-      <ul style="line-height: 1.8; color: #444;">
+      <ul>
         <li>Leadership Development & Organizational Health</li>
         <li>Mindset & Behavioral Transformation</li>
         <li>NLP & Communication Frameworks</li>
@@ -98,8 +98,13 @@
         <li>Awareness-based Development</li>
         <li>Grounded Dhamma Insight <span class="subtle">(as a practical framework for understanding mind, conditioning, and perception)</span></li>
       </ul>
-      <p>The focus is not only external results, but the <strong>quality of mind</strong> behind decision-making, leadership, and human interaction. Real transformation emerges not from forcing change, but from understanding how perception, behavior, and conditioned patterns are formed.</p>
+
+      <div class="highlight-block">
+        <p>The focus is not only external results, but the <strong>quality of mind</strong> behind decision-making, leadership, and human interaction.</p>
+        <p>Real transformation emerges not from forcing change, but from understanding how perception, behavior, and conditioned patterns are formed.</p>
+      </div>
     </div>
+
     <div lang="vi">
       <img src="assets/img/portrait-standing.jpg" alt="Nguyễn Tuấn Kiệt" class="img-portrait">
       <h1>Nguyễn Tuấn Kiệt</h1>
@@ -107,19 +112,24 @@
       <p class="highlight">Nhìn thấu suốt. Lãnh đạo tỉnh thức.</p>
       <p class="subtle">Đồng hành cùng tổ chức và cá nhân phát triển sự minh triết trong điều hành, tối ưu hóa sự tương tác, và xây dựng lối sống, cách làm việc tỉnh thức hơn.</p>
       <hr style="clear: both;">
+      
       <h2>Tổng quan</h2>
       <p>Tôi là <strong>Người đồng hành Chuyển hóa</strong> cho các tổ chức, lãnh đạo và cá nhân đang tìm kiếm sự thay đổi thực chất và bền vững — hướng tới chất lượng lãnh đạo mạnh mẽ hơn, tư duy thấu suốt hơn, sự kết nối lành mạnh giữa con người, và những cách thức lãnh đạo, chung sống tỉnh thức hơn.</p>
       
       <p><strong>Công việc của tôi tích hợp:</strong></p>
-      <ul style="line-height: 1.8; color: #444;">
+      <ul>
         <li>Phát triển Lãnh đạo & Sức khỏe Tổ chức</li>
         <li>Chuyển hóa Tư duy & Hành vi</li>
         <li>Hệ thống NLP & Khung năng lực Giao tiếp</li>
         <li>Khoa học Não bộ & Khoa học Hành vi</li>
         <li>Phát triển dựa trên nền tảng Tỉnh thức (Awareness-based)</li>
-        <li>Tuệ giác từ Dhamma <span class="subtle">(như một khung tham chiếu thực tiễn để thấu hiểu tâm trí, sự định kiến và nhận thức)</span></li>
+        <li>Tuệ giác từ Dhamma <span class="subtle">(như một khung tham chiếu thực tiễn để thấu hiểu tâm trí, các mô thức định hình và nhận thức)</span></li>
       </ul>
-      <p>Trọng tâm không chỉ nằm ở kết quả bên ngoài, mà còn ở <strong>chất lượng tâm trí</strong> đằng sau mỗi quyết định, phong cách lãnh đạo và sự tương tác giữa con người. Sự chuyển hóa thực sự không đến từ việc ép buộc thay đổi, mà từ việc thấu hiểu cách nhận thức, hành vi và các mô thức định kiến được hình thành.</p>
+
+      <div class="highlight-block">
+        <p>Trọng tâm không chỉ nằm ở kết quả bên ngoài, mà còn ở <strong>chất lượng tâm trí</strong> đằng sau mỗi quyết định, phong cách lãnh đạo và sự tương tác giữa con người.</p>
+        <p>Sự chuyển hóa thực sự không đến từ việc ép buộc thay đổi, mà từ việc thấu hiểu cách nhận thức, hành vi và các mô thức định hình được tạo ra.</p>
+      </div>
     </div>
   </section>
 
@@ -129,80 +139,111 @@
       <h2>The Path</h2>
       <p>My approach is grounded in the study and practice of <strong>Dhamma</strong> — viewed not as a belief system, but as a direct way of understanding the mind, conditioning, perception, and human suffering.</p>
       <p>I utilize <strong>Neuroscience, NLP, and Behavioral Science</strong> as practical frameworks to better understand:</p>
-      <ul style="line-height: 1.8; color: #444;">
+      <ul>
         <li>Cognitive patterns & Decision-making habits</li>
         <li>Emotional reactivity & Stress responses</li>
         <li>Communication & Human dynamics within organizations and everyday life</li>
       </ul>
-      <p>At the core of this work is <strong>Awareness</strong>. The capacity to observe <em>Thought</em> without immediate identification, <em>Emotion</em> without immediate reaction, and <em>Pressure</em> without unconscious habit creates the possibility for clearer leadership, wiser action, and more sustainable transformation, both professionally and personally.</p>
-      <p>This path is not about "fixing" people or pursuing idealized self-improvement. It is about developing the clarity to see things as they are, understanding more deeply, and allowing transformation to emerge naturally through awareness and conscious practice.</p>
+
+      <div class="highlight-block">
+        <p><strong>At the core of this work is Awareness.</strong></p>
+        <p>The capacity to observe:</p>
+        <ul>
+          <li><strong>Thought</strong> without immediate identification</li>
+          <li><strong>Emotion</strong> without immediate reaction</li>
+          <li><strong>Pressure</strong> without unconscious habit</li>
+        </ul>
+        <p>creates the possibility for <strong>clearer leadership, wiser action, and more sustainable transformation</strong>, both professionally and personally.</p>
+      </div>
+
+      <p>This path is not about "fixing" people or pursuing idealized self-improvement. It is about developing the <strong>clarity</strong> to see things as they are, understanding more deeply, and allowing transformation to emerge naturally through awareness and conscious practice.</p>
     </div>
+
     <div lang="vi">
       <img src="assets/img/portrait-wide.jpg" alt="Con đường" class="img-wide">
       <h2>Con đường</h2>
-      <p>Nền tảng công việc của tôi dựa trên sự nghiên cứu và thực hành <strong>Dhamma (Pháp)</strong> — được nhìn nhận không phải như một hệ thống đức tin, mà là phương pháp trực tiếp để thấu hiểu tâm trí, sự định kiến, nhận thức và khổ đau của con người.</p>
+      <p>Nền tảng công việc của tôi dựa trên sự nghiên cứu và thực hành <strong>Dhamma (Pháp)</strong> — được nhìn nhận không phải như một hệ thống đức tin, mà là phương pháp trực tiếp để thấu hiểu tâm trí, các mô thức định hình, nhận thức và khổ đau.</p>
       <p>Tôi sử dụng <strong>Khoa học Não bộ, NLP và Khoa học Hành vi</strong> như những khung tham chiếu thực tiễn để thấu hiểu sâu hơn về:</p>
-      <ul style="line-height: 1.8; color: #444;">
+      <ul>
         <li>Các mô thức tư duy & Thói quen ra quyết định</li>
         <li>Phản ứng cảm xúc & Các phản hồi với áp lực</li>
         <li>Giao tiếp & Động lực giữa con người trong tổ chức và đời sống thường nhật</li>
       </ul>
-      <p>Cốt lõi của tiến trình này là <strong>Sự tỉnh thức (Awareness)</strong>. Khả năng quan sát <em>Suy nghĩ</em> mà không bị đồng hóa, <em>Cảm xúc</em> mà không phản ứng tức thời, và <em>Áp lực</em> mà không rơi vào thói quen vô thức — chính là chìa khóa mở ra sự lãnh đạo thấu suốt, hành động minh triết và chuyển hóa bền vững, cho cả sự nghiệp lẫn đời sống cá nhân.</p>
-      <p>Con đường này không phải để "sửa chữa" con người hay theo đuổi sự hoàn thiện lý tưởng. Đó là hành trình phát triển khả năng nhìn rõ mọi việc như chúng đang là, thấu hiểu sâu sắc hơn, và để sự chuyển hóa tự tuôn chảy thông qua nhận thức và thực hành tỉnh thức.</p>
+
+      <div class="highlight-block">
+        <p><strong>Cốt lõi của tiến trình này là Sự tỉnh thức (Awareness).</strong></p>
+        <p>Khả năng quan sát:</p>
+        <ul>
+          <li><strong>Suy nghĩ</strong> mà không bị đồng hóa ngay lập tức</li>
+          <li><strong>Cảm xúc</strong> mà không phản ứng tức thời</li>
+          <li><strong>Áp lực</strong> mà không rơi vào thói quen vô thức</li>
+        </ul>
+        <p>tạo ra khả năng cho sự <strong>lãnh đạo thấu suốt, hành động minh triết và chuyển hóa bền vững</strong>, trong cả sự nghiệp lẫn đời sống cá nhân.</p>
+      </div>
+
+      <p>Con đường này không phải để "sửa chữa" con người hay theo đuổi sự hoàn thiện lý tưởng. Đó là hành trình phát triển <strong>khả năng nhìn rõ</strong> mọi việc như chúng đang là, thấu hiểu sâu sắc hơn, và để sự chuyển hóa tự tuôn chảy thông qua nhận thức và thực hành tỉnh thức.</p>
     </div>
   </section>
 
   <section id="reflections">
     <div lang="en">
-      <div style="text-align: center;">
-        <img src="assets/img/portrait-meditation.jpg" alt="Reflections" style="width: 180px; border-radius: 50%; margin-bottom: 20px;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <img src="assets/img/portrait-meditation.jpg" alt="Reflections" style="width: 180px; border-radius: 50%;">
       </div>
       <h2>Reflections</h2>
       <p class="subtle">Short insights. Direct observations. Real practice on mind and leadership.</p>
       <hr>
-      <div class="reflection-item"><h3>Reflection #1</h3><p>Most people try to change their lives by changing conditions...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Reflection #2</h3><p>Not everything you feel needs to be fixed...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Reflection #3</h3><p>You are not tired because of life...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Reflection #4</h3><p>What you call “yourself” is often just a pattern repeating...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Reflection #5</h3><p>Clarity does not come from thinking more...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Reflection #6</h3><p>You don’t have to push life into a certain shape...</p></div>
-      <hr>
+
+      <div class="reflection-item"><h3>Reflection #1: The Inner Shift</h3><p>Most people try to change their lives by changing conditions. But true change starts by changing the observer of those conditions. When the "who" that is experiencing life shifts, the world follows.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #2: Emotional Non-Resistance</h3><p>Not everything you feel needs to be fixed. Sometimes, the fastest way to peace is simply allowing the discomfort to exist without trying to push it away. Freedom is the absence of resistance.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #3: Energy vs. Effort</h3><p>You are not tired because of life; you are tired because of how you resist it. Effort is mental. Energy is natural. When you stop fighting what is, energy returns.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #4: Identifying Patterns</h3><p>What you call “yourself” is often just a pattern repeating. Awareness is the first crack in the armor of habit. Once you see the pattern, you are no longer the pattern.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #5: Beyond Thinking</h3><p>Clarity does not come from thinking more. It comes from the silence between thoughts. In that gap, the truth reveals itself without effort.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #6: Non-Forcing</h3><p>You don’t have to push life into a certain shape. Like water, life finds its own way when you remove the obstacles of "should" and "must".</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #7: The Power of No</h3><p>Every "yes" to someone else that isn't a "yes" to your own truth is a small betrayal. Integrity starts with the courage to say no.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #8: Presence in Crisis</h3><p>Crisis doesn't create character; it reveals it. When the world is shaking, your only anchor is the depth of your presence in this moment.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #9: Listening for Silence</h3><p>To truly hear someone, you must listen to what they are not saying. Real communication happens in the space between words.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #10: Success and Fulfillment</h3><p>Success is getting what you want. Fulfillment is wanting what you have. One is an achievement; the other is an awareness.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #11: The Illusion of Control</h3><p>Control is a comfort blanket for a fearful mind. Wisdom is knowing that the only thing you can truly govern is your own reaction to the unknown.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #12: Leadership and Love</h3><p>A leader who cannot see the humanity in their team is just a manager of machines. True leadership is a form of deep care for human potential.</p></div><hr>
+      <div class="reflection-item"><h3>Reflection #13: Stillness in Motion</h3><p>You don't need to go to a cave to find peace. The highest practice is maintaining a quiet heart while your hands are busy with the world.</p></div><hr>
       <div class="reflection-item">
         <h3>Reflection #14: THE GAP</h3>
         <p><strong>First, the reaction. Then, the seeing.</strong></p>
-        <p>There are moments when the reaction comes too fast...</p>
+        <p>There are moments when the reaction comes too fast—the sharp word, the defensive posture, the surge of irritation. In that second, the old habit wins.</p>
+        <p>But then, there is the seeing. The awareness that follows. You recognize the pattern as it is happening, or just after. You feel the tension in the body, the noise in the mind.</p>
+        <p>That recognition is the most important part. Don't judge the reaction. Just acknowledge the gap. Every time you notice, the gap between the trigger and the response gets a little wider.</p>
         <p style="font-weight: 500;">Not yet free — but no longer completely unaware.</p>
       </div>
     </div>
 
     <div lang="vi">
-      <div style="text-align: center;">
-        <img src="assets/img/portrait-meditation.jpg" alt="Suy ngẫm" style="width: 180px; border-radius: 50%; margin-bottom: 20px;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <img src="assets/img/portrait-meditation.jpg" alt="Suy ngẫm" style="width: 180px; border-radius: 50%;">
       </div>
       <h2>Suy ngẫm</h2>
       <p class="subtle">Những góc nhìn súc tích. Quan sát trực tiếp. Thực hành thực tế về tâm trí và lãnh đạo.</p>
       <hr>
-      <div class="reflection-item"><h3>Chiêm nghiệm #1</h3><p>Hầu hết mọi người cố gắng thay đổi cuộc đời bằng cách thay đổi hoàn cảnh...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Chiêm nghiệm #2</h3><p>Không phải mọi cảm xúc bạn cảm nhận đều cần được "sửa chữa"...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Chiêm nghiệm #3</h3><p>Bạn mệt mỏi không phải vì cuộc đời...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Chiêm nghiệm #4</h3><p>Cái bạn gọi là “bản thân” thường chỉ là một khuôn mẫu đang lặp lại...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Chiêm nghiệm #5</h3><p>Sự rõ ràng không đến từ việc suy nghĩ nhiều hơn...</p></div>
-      <hr>
-      <div class="reflection-item"><h3>Chiêm nghiệm #6</h3><p>Bạn không cần phải ép cuộc sống vào một hình dạng nhất định...</p></div>
-      <hr>
+
+      <div class="reflection-item"><h3>Chiêm nghiệm #1: Sự Chuyển Dịch Bên Trong</h3><p>Hầu hết mọi người cố gắng thay đổi cuộc đời bằng cách thay đổi hoàn cảnh. Nhưng sự thay đổi thực sự bắt đầu bằng cách thay đổi người quan sát những hoàn cảnh đó. Khi "cái tôi" trải nghiệm cuộc sống chuyển dịch, thế giới cũng sẽ chuyển mình theo.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #2: Không Kháng Cự Cảm Xúc</h3><p>Không phải mọi cảm xúc bạn cảm nhận đều cần được "sửa chữa". Đôi khi, con đường nhanh nhất dẫn đến bình an chỉ đơn giản là cho phép sự khó chịu tồn tại mà không cố gắng xua đuổi nó. Tự do là khi không còn sự kháng cự.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #3: Năng Lượng và Nỗ Lực</h3><p>Bạn mệt mỏi không phải vì cuộc đời; bạn mệt mỏi vì cách bạn kháng cự nó. Nỗ lực là việc của tâm trí. Năng lượng là tự nhiên. Khi bạn ngừng chiến đấu với những gì đang là, năng lượng sẽ quay trở lại.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #4: Nhận Diện Mô Thức</h3><p>Cái bạn gọi là “bản thân” thường chỉ là một khuôn mẫu đang lặp lại. Sự tỉnh thức là vết nứt đầu tiên trên lớp giáp của thói quen. Một khi bạn nhìn thấy mô thức, bạn không còn là mô thức đó nữa.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #5: Vượt Lên Trên Suy Nghĩ</h3><p>Sự rõ ràng không đến từ việc suy nghĩ nhiều hơn. Nó đến từ sự tĩnh lặng giữa các dòng suy nghĩ. Trong khoảng trống đó, sự thật tự lộ diện mà không cần nỗ lực.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #6: Không Ép Buộc</h3><p>Bạn không cần phải ép cuộc sống vào một hình dạng nhất định. Giống như dòng nước, cuộc sống tự tìm thấy đường đi của nó khi bạn loại bỏ những rào cản của việc "nên" và "phải".</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #7: Sức Mạnh Của Chữ "Không"</h3><p>Mỗi khi bạn nói "có" với người khác mà đó không phải là sự thật trong lòng bạn, đó là một lần bạn phản bội chính mình. Chính trực bắt đầu từ lòng can đảm biết nói không.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #8: Hiện Diện Trong Khủng Hoảng</h3><p>Khủng hoảng không tạo nên nhân cách; nó bộc lộ nhân cách. Khi thế giới đang rung chuyển, mỏ neo duy nhất của bạn chính là độ sâu của sự hiện diện ngay trong lúc này.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #9: Lắng Nghe Sự Tĩnh Lặng</h3><p>Để thực sự nghe thấy ai đó, bạn phải lắng nghe cả những điều họ không nói. Giao tiếp thực sự diễn ra trong khoảng không giữa những con chữ.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #10: Thành Công và Mãn Nguyện</h3><p>Thành công là đạt được những gì bạn muốn. Mãn nguyện là trân trọng những gì bạn có. Một bên là thành tựu; bên kia là sự tỉnh thức.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #11: Ảo Tưởng Về Sự Kiểm Soát</h3><p>Kiểm soát là tấm chăn an ủi cho một tâm trí sợ hãi. Sự minh triết là biết rằng điều duy nhất bạn thực sự có thể quản lý là phản ứng của chính mình trước những điều chưa biết.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #12: Lãnh Đạo và Sự Thấu Cảm</h3><p>Một nhà lãnh đạo không thể nhìn thấy tính nhân bản trong đội ngũ của mình thì chỉ là một người quản lý máy móc. Lãnh đạo thực thụ là một hình thức quan tâm sâu sắc đến tiềm năng của con người.</p></div><hr>
+      <div class="reflection-item"><h3>Chiêm nghiệm #13: Tĩnh Lặng Trong Chuyển Động</h3><p>Bạn không cần phải vào hang động mới tìm được bình an. Sự thực hành cao nhất là giữ một trái tim tĩnh lặng trong khi đôi tay vẫn đang bận rộn với thế giới.</p></div><hr>
       <div class="reflection-item">
         <h3>Chiêm nghiệm #14: KHOẢNG TRỐNG</h3>
         <p><strong>Phản ứng trước. Thấy sau.</strong></p>
-        <p>Có những khoảnh khắc mà phản ứng đến quá nhanh...</p>
+        <p>Có những khoảnh khắc mà phản ứng đến quá nhanh—một lời nói sắc mỏng, một thái độ phòng vệ, một cơn bực bội trào dâng. Trong giây đó, thói quen cũ đã thắng.</p>
+        <p>Nhưng ngay sau đó, là cái Thấy. Sự tỉnh thức theo sau. Bạn nhận ra mô thức ngay khi nó đang diễn ra, hoặc ngay sau đó. Bạn cảm thấy sự căng thẳng trong cơ thể, sự ồn ào trong tâm trí.</p>
+        <p>Sự nhận diện đó mới là phần quan trọng nhất. Đừng phán xét phản ứng. Chỉ cần ghi nhận khoảng trống đó. Mỗi khi bạn nhận ra, khoảng trống giữa tác nhân kích thích và phản ứng sẽ rộng thêm một chút.</p>
         <p style="font-weight: 500;">Chưa tự do — nhưng không còn hoàn toàn mê muội.</p>
       </div>
     </div>
